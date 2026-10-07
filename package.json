@@ -1,0 +1,17 @@
+{
+  "name": "demo-app",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "infra:up": "docker compose up -d postgres azurite redis",
+    "infra:down": "docker compose down",
+    "dev:api": "npm run start:dev --workspace apps/api",
+    "dev:worker": "npm run dev --workspace apps/worker",
+    "dev:web": "npm run dev --workspace apps/web",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down -v"
+  }
+}

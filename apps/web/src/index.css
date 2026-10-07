@@ -1,0 +1,108 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+}
+
+.upload-form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+.upload-form button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.upload-form button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.error {
+  color: #f87171;
+}
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.file-table th,
+.file-table td {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #334155;
+  font-size: 0.9rem;
+}
+
+.file-table a {
+  color: #818cf8;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge-pending {
+  background: #475569;
+  color: #e2e8f0;
+}
+
+.badge-processing {
+  background: #ca8a04;
+  color: #fffbeb;
+}
+
+.badge-completed {
+  background: #16a34a;
+  color: #f0fdf4;
+}
+
+.badge-failed {
+  background: #dc2626;
+  color: #fef2f2;
+}
+
+.empty {
+  color: #94a3b8;
+}
