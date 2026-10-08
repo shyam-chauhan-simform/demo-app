@@ -88,6 +88,8 @@ services:
   web:
     build: ./apps/web
     container_name: demo-web
+    environment:
+      API_UPSTREAM: "http://api:3000"
     ports:
       - "5173:80"
     depends_on:

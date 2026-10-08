@@ -5,8 +5,9 @@ server {
     index index.html;
 
     location /api/ {
-        proxy_pass http://api:3000/;
-        proxy_set_header Host $host;
+        proxy_pass ${API_UPSTREAM}/;
+        proxy_set_header Host $proxy_host;
+        proxy_ssl_server_name on;
     }
 
     location / {

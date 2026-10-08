@@ -7,6 +7,9 @@ export class BlobStorageService implements OnModuleInit {
 
   async onModuleInit() {
     const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+    if (!connectionString) {
+      throw new Error('AZURE_STORAGE_CONNECTION_STRING is not set');
+    }
     const containerName = process.env.AZURE_STORAGE_CONTAINER ?? 'uploads';
     const serviceClient = BlobServiceClient.fromConnectionString(connectionString);
     this.containerClient = serviceClient.getContainerClient(containerName);

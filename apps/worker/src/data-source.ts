@@ -11,4 +11,5 @@ export const dataSource = new DataSource({
   database: process.env.POSTGRES_DB ?? 'demo',
   entities: [FileRecord],
   synchronize: false,
+  ssl: process.env.POSTGRES_SSL === 'true' ? { rejectUnauthorized: false } : undefined,
 });
